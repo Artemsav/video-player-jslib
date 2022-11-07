@@ -14,14 +14,18 @@
       width: 800px;
       height: 600px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.781);
-      cursor: pointer
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
     }
     .player .screen {
-      width: 100%;
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-grow:999;
     }
     .player .bottom-controls {
-      background-color: black
+      background-color: black;
+      flex-direction: column;
     }
     .player .player-button {
       border-style: hidden;
