@@ -21,7 +21,7 @@
     .player .screen {
       display: flex;
       flex-direction: column;
-      flex-grow:999;
+      flex-grow:1;
     }
     .player .bottom-controls {
       background-color: black;
@@ -33,7 +33,10 @@
       background-color: transparent
     }
     .player .player-button.play {
-      color: white
+      color: white;
+    }
+    .player .player-button.volume {
+      color: white;
     }
   </style>
   <script src="https://kit.fontawesome.com/5143e822d0.js" crossorigin="anonymous"></script>
@@ -42,16 +45,30 @@
   
   <div class="player", id="player">
     <div class="screen js-video-container" ></div>
-    <div class="bottom-controls">
-      <div class="left-buttons">
-        <button class="player-button js-play-button" hidden>
-        <div class="player-button play">
-        <i class="fa-solid fa-play"></i></button>
-        <button class="player-button js-pause-button" hidden>
-          <div class="player-button play">
-          <i class="fa-solid fa-pause"></i></button>
+      <div class="bottom-controls">
+        <div class="left-buttons">
+          <button class="player-button js-play-button" hidden>
+            <div class="player-button play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </button>
+          <button class="player-button js-pause-button" hidden>
+            <div class="player-button play">
+              <i class="fa-solid fa-pause"></i>
+            </div>
+          </button>
+          <button class="player-button js-mute-button" hidden>
+            <div class="player-button volume">
+              <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </div>
+          </button>
+          <button class="player-button js-volume-button" hidden>
+            <div class="player-button volume">
+              <i class="fa fa-volume-off" aria-hidden="true"></i>
+            </div>
+          </button>        
         </div>
-        <div class="player-button volume"></div>
+
       </div>
   
       <div class="viewing-panel">
