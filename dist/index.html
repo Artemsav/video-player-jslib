@@ -19,18 +19,31 @@
       flex-direction: column;
     }
     .player .screen {
-      display: flex;
-      flex-direction: column;
-      flex-grow:1;
+      flex-grow: 1;
     }
     .player .bottom-controls {
       background-color: black;
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
     .player .player-button {
       border-style: hidden;
       cursor: pointer;
       background-color: transparent
+    }
+    .player .left-buttons {
+      display: flex;
+      flex-grow:1;
+    }
+    .player .right-buttons {
+      display: flex;
+      flex-grow:1;
+      justify-content: flex-end;
+    }
+    .player .viewing-panel {
+      display: flex;
+      flex-grow:2;
     }
     .player .player-button.play {
       color: white;
@@ -41,6 +54,14 @@
       margin: 10px auto;
     }
     .player .player-button.volume {
+      color: white;
+      font-size: 130%;
+      line-height: 1.3;
+      width: 20px;
+      height: 20px;
+      margin: 10px auto;
+    }
+    .player .player-button.fullscreen {
       color: white;
       font-size: 130%;
       line-height: 1.3;
@@ -78,16 +99,18 @@
             </div>
           </button>        
         </div>
-
-      </div>
-  
-      <div class="viewing-panel">
-        <div class="viewing-time"></div>
-        <div class="viewing-progressbar"></div>
-        <div class="video-duration"></div>
-      </div>
-      <div class="right-buttons">
-        <div class="player-button fullscreen"></div>
+        <div class="viewing-panel">
+          <div class="viewing-time"></div>
+          <div class="viewing-progressbar"></div>
+          <div class="video-duration"></div>
+        </div>
+        <div class="right-buttons">
+          <button class="player-button js-fullscreen-button">
+            <div class="player-button fullscreen">
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </button> 
+        </div>
       </div>
   </div>
 
