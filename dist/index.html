@@ -30,7 +30,13 @@
     .player .player-button {
       border-style: hidden;
       cursor: pointer;
-      background-color: transparent
+      background-color: transparent;
+      color: white;
+      font-size: 130%;
+      line-height: 1.3;
+      width: 20px;
+      height: 20px;
+      margin: 10px;
     }
     .player .left-buttons {
       display: flex;
@@ -45,58 +51,26 @@
       display: flex;
       flex-grow:2;
     }
-    .player .player-button.play {
-      color: white;
-      font-size: 130%;
-      line-height: 1.3;
-      width: 20px;
-      height: 20px;
-      margin: 10px auto;
-    }
-    .player .player-button.volume {
-      color: white;
-      font-size: 130%;
-      line-height: 1.3;
-      width: 20px;
-      height: 20px;
-      margin: 10px auto;
-    }
-    .player .player-button.fullscreen {
-      color: white;
-      font-size: 130%;
-      line-height: 1.3;
-      width: 20px;
-      height: 20px;
-      margin: 10px auto;
-    }
   </style>
   <script src="https://kit.fontawesome.com/5143e822d0.js" crossorigin="anonymous"></script>
 </head>
 <body>
   
-  <div class="player", id="player">
+  <div class="player" id="player">
     <div class="screen js-video-container" ></div>
       <div class="bottom-controls">
         <div class="left-buttons">
           <button class="player-button js-play-button" hidden>
-            <div class="player-button play">
-              <i class="fa-solid fa-play"></i>
-            </div>
+            <i class="fa-solid fa-play"></i>
           </button>
           <button class="player-button js-pause-button" hidden>
-            <div class="player-button play">
-              <i class="fa-solid fa-pause"></i>
-            </div>
+            <i class="fa-solid fa-pause"></i>
           </button>
           <button class="player-button js-mute-button" hidden>
-            <div class="player-button volume">
-              <i class="fa fa-volume-up" aria-hidden="true"></i>
-            </div>
+            <i class="fa fa-volume-up" aria-hidden="true"></i>
           </button>
           <button class="player-button js-volume-button" hidden>
-            <div class="player-button volume">
-              <i class="fa fa-volume-off" aria-hidden="true"></i>
-            </div>
+            <i class="fa fa-volume-off" aria-hidden="true"></i>
           </button>        
         </div>
         <div class="viewing-panel">
@@ -106,9 +80,7 @@
         </div>
         <div class="right-buttons">
           <button class="player-button js-fullscreen-button">
-            <div class="player-button fullscreen">
               <i class="fa-solid fa-expand"></i>
-            </div>
           </button> 
         </div>
       </div>
