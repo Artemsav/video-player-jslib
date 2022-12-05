@@ -42,6 +42,17 @@
       display: flex;
       align-items: center;
       flex-grow:1;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      flex-direction: row;
+    }
+    .viewing-panel .viewing-progressbar{
+      display: flex;
+      align-items: center;
+      flex-grow:2;
+      color: black;
+      font-family: 'Roboto', sans-serif;
+      flex-direction: row;
     }
   </style>
   <script src="https://kit.fontawesome.com/5143e822d0.js" crossorigin="anonymous"></script>
@@ -64,9 +75,9 @@
             <i class="fa fa-volume-off fa-xs" aria-hidden="true"></i>
           </button>        
         <div class="viewing-panel">
-          <div class="viewing-time"></div>
-          <div class="viewing-progressbar"></div>
-          <div class="video-duration"></div>
+          <div class="viewing-time js-current-time"></div>
+          <div class="viewing-progressbar js-progress" style="background-color: grey;"><div class="js-progress-slider" style="background-color: red;">Прогресс</div></div>
+          <div class="video-duration js-duration"></div>
         </div>
           <button class="player-button js-fullscreen-button">
               <i class="fa-solid fa-expand"></i>
