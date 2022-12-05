@@ -53,6 +53,15 @@
       color: black;
       font-family: 'Roboto', sans-serif;
       flex-direction: row;
+      height: 5px;
+      background-color: grey;
+      margin: 12px;
+      border-radius:5px;
+    }
+    .viewing-panel .viewing-progressbar-slider{
+      background-color: red;
+      height: 5px;
+      border-radius:5px;
     }
   </style>
   <script src="https://kit.fontawesome.com/5143e822d0.js" crossorigin="anonymous"></script>
@@ -76,7 +85,9 @@
           </button>        
         <div class="viewing-panel">
           <div class="viewing-time js-current-time"></div>
-          <div class="viewing-progressbar js-progress" style="background-color: grey;"><div class="js-progress-slider" style="background-color: red;">Прогресс</div></div>
+          <div class="viewing-progressbar js-progress">
+            <div class="viewing-progressbar-slider js-progress-slider"></div>
+          </div>
           <div class="video-duration js-duration"></div>
         </div>
           <button class="player-button js-fullscreen-button">
