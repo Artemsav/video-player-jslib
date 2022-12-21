@@ -11,8 +11,8 @@
   <meta name="theme-color" content="#ffffff">
   <style type="text/css">
     .player {
-      width: 800px;
-      height: 600px;
+      width: 796px;
+      height: 594px;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.781);
       cursor: pointer;
       display: flex;
@@ -38,7 +38,7 @@
       height: 35px;
       padding: 5px;
     }
-    .player .viewing-panel {
+    .player .viewing-panel{
       display: flex;
       align-items: center;
       flex-grow:1;
@@ -63,11 +63,23 @@
       height: 5px;
       border-radius:5px;
     }
+    .viewing-panel:hover .dot {
+      width: 8px;
+      height: 8px;
+      background-color: red;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      border-style:solid;
+      border-color: white;
+      border-width: 3px;
+
+    }
   </style>
   <script src="https://kit.fontawesome.com/5143e822d0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
   <div class="player" id="player">
     <div class="screen js-video-container" ></div>
       <div class="bottom-controls">
@@ -83,19 +95,19 @@
           <button class="player-button js-volume-button" hidden>
             <i class="fa fa-volume-off fa-xs" aria-hidden="true"></i>
           </button>        
-        <div class="viewing-panel">
+        <div class="viewing-panel">        
           <div class="viewing-time js-current-time"></div>
           <div class="viewing-progressbar js-progress">
             <div class="viewing-progressbar-slider js-progress-slider"></div>
+            <span class="dot"></span>
           </div>
-          <div class="video-duration js-duration"></div>
+          <div class="video-duration js-duration"> </div>
         </div>
           <button class="player-button js-fullscreen-button">
               <i class="fa-solid fa-expand"></i>
           </button> 
       </div>
   </div>
-
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
   <script src="player.js"></script>
