@@ -63,18 +63,24 @@
       height: 5px;
       border-radius:5px;
     }
-    .viewing-panel:hover .dot {
+    .dot {
       width: 8px;
       height: 8px;
       background-color: red;
       border-radius: 50%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
       border-style:solid;
       border-color: white;
       border-width: 3px;
+      opacity: 0.0;
+      transition-duration: 300ms;
+      transition-property: all;
+      transition-timing-function: ease-in;
 
+
+    }
+    .viewing-panel:hover .dot {
+      transition-timing-function: ease-out;
+      opacity: 1.0;
     }
   </style>
   <script src="https://kit.fontawesome.com/5143e822d0.js" crossorigin="anonymous"></script>
